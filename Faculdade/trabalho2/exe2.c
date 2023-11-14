@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int emBranco(char *a);
 
@@ -20,7 +21,8 @@ int main(void) {
     fgets(mensagem, sizeof(mensagem), stdin);
 
     int contagem = emBranco(mensagem);
-    printf("\nContagem de brancos: %i", contagem);
+    printf("\nContagem de brancos: %i\n", contagem);
+    printf("%c\n", mensagem[strlen(mensagem)]);
 
     return 0;
 }
